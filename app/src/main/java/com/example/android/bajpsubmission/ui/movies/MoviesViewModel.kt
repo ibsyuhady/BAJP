@@ -7,15 +7,16 @@ import com.example.android.bajpsubmission.data.MoviesEntity
 import com.example.android.bajpsubmission.utils.DataDummy
 
 class MoviesViewModel : ViewModel() {
-    private val _data = MutableLiveData<List<MoviesEntity>>()
-    val data: LiveData<List<MoviesEntity>> = _data
+
+    private val _movies = MutableLiveData<List<MoviesEntity>>()
+    val movies: LiveData<List<MoviesEntity>> = _movies
 
     init {
         getListMovies()
     }
 
     private fun getListMovies(): List<MoviesEntity>? {
-        _data.value = DataDummy.generateDummyMovies()
-        return _data.value
+        _movies.value = DataDummy.generateDummyMovies()
+        return _movies.value
     }
 }

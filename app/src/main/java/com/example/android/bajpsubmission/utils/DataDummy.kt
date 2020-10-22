@@ -240,7 +240,7 @@ object DataDummy {
             TvShowEntity(
                 tvShowId = 8,
                 title = "Prison Break",
-                currentSeason = "Season 5| 2017 | Ended",
+                currentSeason = "Season 5 | 2017 | Ended",
                 description = "Due to a political conspiracy, an innocent man is sent to death row and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break the both of them out, from the inside out.",
                 poster = "https://image.tmdb.org/t/p/original/j7HFOunuAVpOdiBhXpjwRxIgK5y.jpg",
                 backdrop = "https://image.tmdb.org/t/p/original/ovaQot7DgQXjmU99jUpGlne6EJO.jpg",

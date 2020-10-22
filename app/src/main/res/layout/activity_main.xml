@@ -21,11 +21,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?attr/colorOnPrimary"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
         app:itemIconTint="?attr/colorSecondary"
         app:itemTextColor="?attr/colorSecondary"
         app:labelVisibilityMode="selected"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         app:menu="@menu/bottom_nav_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

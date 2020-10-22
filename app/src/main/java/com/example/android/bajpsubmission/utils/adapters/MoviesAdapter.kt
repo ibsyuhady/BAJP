@@ -1,4 +1,4 @@
-package com.example.android.bajpsubmission
+package com.example.android.bajpsubmission.utils.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -19,7 +19,10 @@ class MoviesAdapter(private val onClickListener: OnClickListener) :
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): MoviesViewHolder {
         return MoviesViewHolder(ListItemMoviesBinding.inflate(LayoutInflater.from(parent.context)))
     }
 

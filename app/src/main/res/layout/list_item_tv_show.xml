@@ -6,73 +6,73 @@
     <data>
 
         <variable
-            name="listMovies"
-            type="com.example.android.bajpsubmission.data.MoviesEntity" />
+            name="listTvShow"
+            type="com.example.android.bajpsubmission.data.TvShowEntity" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/list_movies_container"
+        android:id="@+id/list_tv_show_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".home.MainActivity">
 
         <ImageView
-            android:id="@+id/img_movies_poster"
+            android:id="@+id/img_tv_show_poster"
             android:layout_width="100dp"
             android:layout_height="140dp"
             android:layout_marginTop="@dimen/margin_small"
             android:contentDescription="@string/movies_poster"
             android:scaleType="fitXY"
-            app:imageUrl="@{listMovies.poster}"
+            app:imageUrl="@{listTvShow.poster}"
             app:layout_constraintCircleRadius="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/tv_movies_title"
+            android:id="@+id/tv_tv_show_title"
             style="@style/TextAppearance.JetpackPlay.TextAppearance.Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
             android:layout_marginTop="@dimen/margin_small"
-            android:text="@{listMovies.title}"
+            android:text="@{listTvShow.title}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/img_movies_poster"
-            app:layout_constraintTop_toTopOf="@id/img_movies_poster"
+            app:layout_constraintStart_toEndOf="@id/img_tv_show_poster"
+            app:layout_constraintTop_toTopOf="@id/img_tv_show_poster"
             tools:text="Darkest Hour" />
 
         <TextView
-            android:id="@+id/tv_movies_year"
+            android:id="@+id/tv_tv_show_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{listMovies.year}"
+            android:text="@{listTvShow.currentSeason}"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_movies_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_movies_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_tv_show_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tv_show_title"
             tools:text="2017" />
 
         <TextView
-            android:id="@+id/tv_cast_text"
+            android:id="@+id/tv_tv_show_cast_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:text="@string/cast"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/tv_movies_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_movies_year" />
+            app:layout_constraintStart_toStartOf="@+id/tv_tv_show_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tv_show_year" />
 
         <TextView
-            android:id="@+id/tv_cast"
+            android:id="@+id/tv_tv_show_cast"
             style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@{listMovies.cast}"
+            android:text="@{listTvShow.cast}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_cast_text"
-            app:layout_constraintTop_toBottomOf="@+id/tv_cast_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_tv_show_cast_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tv_show_cast_text"
             tools:text="Gary Oldman, Kristin Scott Thomas, Lily James" />
 
         <View
@@ -82,8 +82,8 @@
             android:layout_marginTop="@dimen/margin_small"
             android:background="?attr/colorOnPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/img_movies_poster"
-            app:layout_constraintTop_toBottomOf="@id/img_movies_poster" />
+            app:layout_constraintStart_toStartOf="@id/img_tv_show_poster"
+            app:layout_constraintTop_toBottomOf="@id/img_tv_show_poster" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

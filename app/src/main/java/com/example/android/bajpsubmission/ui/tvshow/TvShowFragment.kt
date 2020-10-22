@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.android.bajpsubmission.databinding.FragmentTvShowBinding
+import com.example.android.bajpsubmission.utils.adapters.TvShowAdapter
 
 class TvShowFragment : Fragment() {
 
@@ -24,6 +26,17 @@ class TvShowFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.lifecycleOwner = this
         binding.viewModel = viewModel
+
+        onClickListener()
+    }
+
+    private fun onClickListener() {
+        binding.rvTvShow.adapter = TvShowAdapter(
+            TvShowAdapter.OnClickListener {
+                Toast.makeText(context, "Tv Show has been clicked", Toast.LENGTH_LONG).show()
+            }
+        )
     }
 }
