@@ -77,13 +77,13 @@ object DataDummy {
         movies.add(
             MoviesEntity(
                 moviesId = 6,
-                title = "Inglourious Basterds",
-                year = "2009",
-                description = "In Nazi-occupied France during World War II, a group of Jewish-American soldiers known as \"The Basterds\" are chosen specifically to spread fear throughout the Third Reich by scalping and brutally killing Nazis. The Basterds, lead by Lt. Aldo Raine soon cross paths with a French-Jewish teenage girl who runs a movie theater in Paris which is targeted by the soldiers.",
-                poster = "https://image.tmdb.org/t/p/original/8QlExkCx89u240o3q7n3DREsq5d.jpg",
-                backdrop = "https://image.tmdb.org/t/p/original/yVPcPk96E6Qffiyez2oJc7OKD2A.jpg",
-                director = "Quentin Tarantino",
-                cast = "Brad Pitt, Mélanie Laurent, Christoph Waltz"
+                title = "Downfall",
+                year = "2004",
+                description = "In April of 1945, Germany stands at the brink of defeat with the Russian Army closing in from the east and the Allied Expeditionary Force attacking from the west. In Berlin, capital of the Third Reich, Adolf Hitler proclaims that Germany will still achieve victory and orders his generals and advisers to fight to the last man. When the end finally does come, and Hitler lies dead by his own hand, what is left of his military must find a way to end the killing that is the Battle of Berlin, and lay down their arms in surrender.",
+                poster = "https://image.tmdb.org/t/p/original/gsmCtO2K1SeFki8f0tbBYTh5l9t.jpg",
+                backdrop = "https://image.tmdb.org/t/p/original/7GaIhvhZ9szV0AdYgejtZ8fXaEB.jpg",
+                director = "Oliver Hirschbiegel",
+                cast = "Bruno Ganz, Alexandra Maria Lara, Ulrich Matthes"
             )
         )
 
@@ -103,20 +103,20 @@ object DataDummy {
         movies.add(
             MoviesEntity(
                 moviesId = 8,
-                title = "Downfall",
-                year = "2004",
-                description = "In April of 1945, Germany stands at the brink of defeat with the Russian Army closing in from the east and the Allied Expeditionary Force attacking from the west. In Berlin, capital of the Third Reich, Adolf Hitler proclaims that Germany will still achieve victory and orders his generals and advisers to fight to the last man. When the end finally does come, and Hitler lies dead by his own hand, what is left of his military must find a way to end the killing that is the Battle of Berlin, and lay down their arms in surrender.",
-                poster = "https://image.tmdb.org/t/p/original/gsmCtO2K1SeFki8f0tbBYTh5l9t.jpg",
-                backdrop = "https://image.tmdb.org/t/p/original/7GaIhvhZ9szV0AdYgejtZ8fXaEB.jpg",
-                director = "Oliver Hirschbiegel",
-                cast = "Bruno Ganz, Alexandra Maria Lara, Ulrich Matthes"
+                title = "Inglourious Basterds",
+                year = "2009",
+                description = "In Nazi-occupied France during World War II, a group of Jewish-American soldiers known as \"The Basterds\" are chosen specifically to spread fear throughout the Third Reich by scalping and brutally killing Nazis. The Basterds, lead by Lt. Aldo Raine soon cross paths with a French-Jewish teenage girl who runs a movie theater in Paris which is targeted by the soldiers.",
+                poster = "https://image.tmdb.org/t/p/original/8QlExkCx89u240o3q7n3DREsq5d.jpg",
+                backdrop = "https://image.tmdb.org/t/p/original/yVPcPk96E6Qffiyez2oJc7OKD2A.jpg",
+                director = "Quentin Tarantino",
+                cast = "Brad Pitt, Mélanie Laurent, Christoph Waltz"
             )
         )
 
         movies.add(
             MoviesEntity(
                 moviesId = 9,
-                title = "Darkest Hour ",
+                title = "Darkest Hour",
                 year = "2017",
                 description = "A thrilling and inspiring true story begins on the eve of World War II as, within days of becoming Prime Minister of Great Britain, Winston Churchill must face one of his most turbulent and defining trials: exploring a negotiated peace treaty with Nazi Germany, or standing firm to fight for the ideals, liberty and freedom of a nation. As the unstoppable Nazi forces roll across Western Europe and the threat of invasion is imminent, and with an unprepared public, a skeptical King, and his own party plotting against him, Churchill must withstand his darkest hour, rally a nation, and attempt to change the course of world history.",
                 poster = "https://image.tmdb.org/t/p/original/cHZYUky7hZME9alvcmVoqzdV0kJ.jpg",

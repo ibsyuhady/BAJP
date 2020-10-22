@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="?attr/colorOnPrimary"
-        app:hideOnScroll="true"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         app:itemIconTint="?attr/colorSecondary"
         app:itemTextColor="?attr/colorSecondary"
         app:labelVisibilityMode="selected"
