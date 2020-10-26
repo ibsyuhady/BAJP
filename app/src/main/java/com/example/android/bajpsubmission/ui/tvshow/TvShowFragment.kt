@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.android.bajpsubmission.databinding.FragmentTvShowBinding
 import com.example.android.bajpsubmission.utils.adapters.TvShowAdapter
 
@@ -35,7 +35,12 @@ class TvShowFragment : Fragment() {
     private fun onClickListener() {
         binding.rvTvShow.adapter = TvShowAdapter(
             TvShowAdapter.OnClickListener {
-                Toast.makeText(context, "Tv Show has been clicked", Toast.LENGTH_LONG).show()
+                this.findNavController()
+                    .navigate(
+                        TvShowFragmentDirections.actionNavigationTvShowToNavigationDetailTvShow(
+                            it
+                        )
+                    )
             }
         )
     }

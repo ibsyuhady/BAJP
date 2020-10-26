@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection")
+
 package com.example.android.bajpsubmission.utils
 
 import com.example.android.bajpsubmission.data.MoviesEntity
@@ -54,7 +56,7 @@ object DataDummy {
                 title = "Forrest Gump",
                 year = "1994",
                 description = "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
-                poster = "https://image.tmdb.org/t/p/original/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg",
+                poster = "https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
                 backdrop = "https://image.tmdb.org/t/p/original/4f5AsEwMiKobYBalZWKbkrIcoQV.jpg",
                 director = "Robert Zemeckis",
                 cast = "Tom Hanks, Robin Wright, Gary Sinise"
@@ -67,7 +69,7 @@ object DataDummy {
                 title = "Django Unchained",
                 year = "2012",
                 description = "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
-                poster = "https://image.tmdb.org/t/p/original/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+                poster = "https://image.tmdb.org/t/p/original/y69ZNz2FgtcBqQYekSEbllCLFVs.jpg",
                 backdrop = "https://image.tmdb.org/t/p/original/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
                 director = "Quentin Tarantino",
                 cast = "Jamie Foxx, Christoph Waltz, Leonardo DiCaprio"
@@ -106,7 +108,7 @@ object DataDummy {
                 title = "Inglourious Basterds",
                 year = "2009",
                 description = "In Nazi-occupied France during World War II, a group of Jewish-American soldiers known as \"The Basterds\" are chosen specifically to spread fear throughout the Third Reich by scalping and brutally killing Nazis. The Basterds, lead by Lt. Aldo Raine soon cross paths with a French-Jewish teenage girl who runs a movie theater in Paris which is targeted by the soldiers.",
-                poster = "https://image.tmdb.org/t/p/original/8QlExkCx89u240o3q7n3DREsq5d.jpg",
+                poster = "https://image.tmdb.org/t/p/original/aZu8IKdjVCYahTumxm8KhmHTbX7.jpg",
                 backdrop = "https://image.tmdb.org/t/p/original/yVPcPk96E6Qffiyez2oJc7OKD2A.jpg",
                 director = "Quentin Tarantino",
                 cast = "Brad Pitt, Mélanie Laurent, Christoph Waltz"

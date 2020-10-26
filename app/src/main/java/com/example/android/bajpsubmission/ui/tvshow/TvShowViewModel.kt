@@ -12,10 +12,10 @@ class TvShowViewModel : ViewModel() {
     val tvShow: LiveData<List<TvShowEntity>> = _tvShow
 
     init {
-        getListMovies()
+        getListTvShow()
     }
 
-    private fun getListMovies(): List<TvShowEntity>? {
+    private fun getListTvShow(): List<TvShowEntity>? {
         _tvShow.value = DataDummy.generateDummyTvShow()
         return _tvShow.value
     }

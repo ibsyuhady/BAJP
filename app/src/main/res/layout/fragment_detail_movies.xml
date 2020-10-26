@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.android.bajpsubmission.ui.movies.detail.DetailMoviesViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:ignore="MergeRootFrame">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_detail_movies"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_movies_app_bar_height"
+            android:animateLayoutChanges="true"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout_detail_movies"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleTextAppearance="@style/Theme.JetpackPlay.TextAppearance.Title.ActionBar"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleTextAppearance="@style/Theme.JetpackPlay.TextAppearance.Transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarScrim="?attr/colorPrimary"
+                app:title="@string/about_this_movie"
+                app:titleEnabled="true"
+                app:toolbarId="@id/toolbar_detail_movies">
+
+                <ImageView
+                    android:id="@+id/img_detail_movies_backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_movies_app_bar_height"
+                    android:contentDescription="@string/backdrops_movies"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:imageUrl="@{viewModel.detailMovies.backdrop}"
+                    app:layout_collapseMode="parallax"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_detail_movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@drawable/ic_detail_back" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_detail_movies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/bnv_bottom_padding"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.movies.detail.DetailMoviesFragment">
+
+                <ImageView
+                    android:id="@+id/img_detail_movies_poster"
+                    style="@style/Theme.JetpackPlay.Poster"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:contentDescription="@string/movies_poster"
+                    app:imageUrl="@{viewModel.detailMovies.poster}"
+                    app:layout_constraintCircleRadius="@dimen/margin_normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_title"
+                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:lineHeight="30sp"
+                    android:text="@{viewModel.detailMovies.title}"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_detail_movies_poster"
+                    app:layout_constraintTop_toTopOf="@id/img_detail_movies_poster"
+                    tools:targetApi="p"
+                    tools:text="The Shawshank Redemption" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_release"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.detailMovies.year}"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_title"
+                    tools:text="2017" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_director_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/director"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/img_detail_movies_poster"
+                    app:layout_constraintTop_toBottomOf="@+id/img_detail_movies_poster" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_director"
+                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:text="@{viewModel.detailMovies.director}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_director_text"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_director_text"
+                    tools:text="Frank Darabont" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_cast_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/cast"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_director"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_director" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_cast"
+                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:text="@{viewModel.detailMovies.cast}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_cast_text"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_cast_text"
+                    tools:text="Gary Oldman, Kristin Scott Thomas, Lily James" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_overview_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/overview"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_director"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_cast" />
+
+                <TextView
+                    android:id="@+id/tv_detail_movies_overview"
+                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:text="@{viewModel.detailMovies.description}"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_cast"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_overview_text"
+                    tools:text="Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope." />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -5,12 +5,12 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class MoviesEntity(
-    var moviesId: Long,
-    var title: String,
-    var year: String,
-    var description: String,
-    var poster: String,
-    var backdrop: String,
-    var director: String,
-    var cast: String
+    var moviesId: Long? = 0,
+    var title: String? = null,
+    var year: String? = null,
+    var description: String? = null,
+    var poster: String? = null,
+    var backdrop: String? = null,
+    var director: String? = null,
+    var cast: String? = null
 ) : Parcelable

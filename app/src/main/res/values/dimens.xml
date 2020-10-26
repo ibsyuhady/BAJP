@@ -1,6 +1,10 @@
 <resources>
     <dimen name="margin_normal">16dp</dimen>
     <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
     <dimen name="header_margin">56dp</dimen>
-
+    <dimen name="poster_width">100dp</dimen>
+    <dimen name="poster_height">140dp</dimen>
+    <dimen name="bnv_bottom_padding">72dp</dimen>
+    <dimen name="detail_movies_app_bar_height">278dp</dimen>
 </resources>
