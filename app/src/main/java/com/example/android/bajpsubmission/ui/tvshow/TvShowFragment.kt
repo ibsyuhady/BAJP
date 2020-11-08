@@ -28,7 +28,6 @@ class TvShowFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
-
         onClickListener()
     }
 
@@ -37,9 +36,7 @@ class TvShowFragment : Fragment() {
             TvShowAdapter.OnClickListener {
                 this.findNavController()
                     .navigate(
-                        TvShowFragmentDirections.actionNavigationTvShowToNavigationDetailTvShow(
-                            it
-                        )
+                        TvShowFragmentDirections.actionNavigationTvShowToNavigationDetailTvShow(it)
                     )
             }
         )

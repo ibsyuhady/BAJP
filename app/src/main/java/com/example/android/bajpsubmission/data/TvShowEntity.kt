@@ -5,12 +5,12 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class TvShowEntity(
-    var tvShowId: Long,
-    var title: String,
-    var currentSeason: String,
-    var description: String,
-    var poster: String,
-    var backdrop: String,
-    var creator: String,
-    var cast: String
+    val tvShowId: Long? = 0,
+    val title: String? = null,
+    val currentSeason: String? = null,
+    val description: String? = null,
+    val poster: String? = null,
+    val backdrop: String? = null,
+    val creator: String? = null,
+    val cast: String? = null
 ) : Parcelable

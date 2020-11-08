@@ -23,7 +23,7 @@
             android:layout_height="140dp"
             android:layout_marginTop="@dimen/margin_small"
             android:contentDescription="@string/movies_poster"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             app:imageUrl="@{listMovies.poster}"
             app:layout_constraintCircleRadius="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_movies_year" />
 
         <TextView
-            android:id="@+id/tv_cast"
+            android:id="@+id/tv_movies_cast"
             style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

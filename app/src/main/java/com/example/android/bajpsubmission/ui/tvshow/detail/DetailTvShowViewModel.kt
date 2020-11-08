@@ -1,22 +1,18 @@
 package com.example.android.bajpsubmission.ui.tvshow.detail
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.android.bajpsubmission.data.TvShowEntity
 
-class DetailTvShowViewModel(private val tvShow: TvShowEntity, app: Application) :
-    AndroidViewModel(app) {
+class DetailTvShowViewModel : ViewModel() {
 
     private val _detailTvShow = MutableLiveData<TvShowEntity>()
     val detailTvShow: LiveData<TvShowEntity> = _detailTvShow
 
-    init {
-        getDetailTvShow()
-    }
-
-    private fun getDetailTvShow() {
-        _detailTvShow.value = tvShow
+    fun getDetailTvShow(tvShow: TvShowEntity?) {
+        if (_detailTvShow.value == null) {
+            _detailTvShow.value = tvShow
+        }
     }
 }

@@ -23,7 +23,7 @@
             android:layout_height="140dp"
             android:layout_marginTop="@dimen/margin_small"
             android:contentDescription="@string/movies_poster"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             app:imageUrl="@{listTvShow.poster}"
             app:layout_constraintCircleRadius="16dp"
             app:layout_constraintStart_toStartOf="parent"

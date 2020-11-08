@@ -30,13 +30,13 @@ fun bindImage(imageView: ImageView, imgUrl: String?) {
 @BindingAdapter("app:listMovies")
 fun bindRecyclerViewMovies(recyclerView: RecyclerView, listMovies: List<MoviesEntity>?) {
     listMovies?.let {
-        (recyclerView.adapter as MoviesAdapter).submitList(listMovies)
+        (recyclerView.adapter as? MoviesAdapter)?.submitList(listMovies)
     }
 }
 
 @BindingAdapter("app:listTvShow")
 fun bindRecyclerViewTvShow(recyclerView: RecyclerView, listTvShow: List<TvShowEntity>?) {
     listTvShow?.let {
-        (recyclerView.adapter as TvShowAdapter).submitList(listTvShow)
+        (recyclerView.adapter as? TvShowAdapter)?.submitList(listTvShow)
     }
 }

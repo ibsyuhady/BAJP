@@ -15,7 +15,7 @@ class TvShowViewModel : ViewModel() {
         getListTvShow()
     }
 
-    private fun getListTvShow(): List<TvShowEntity>? {
+    fun getListTvShow(): List<TvShowEntity>? {
         _tvShow.value = DataDummy.generateDummyTvShow()
         return _tvShow.value
     }

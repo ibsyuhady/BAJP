@@ -15,7 +15,7 @@ class MoviesViewModel : ViewModel() {
         getListMovies()
     }
 
-    private fun getListMovies(): List<MoviesEntity>? {
+    fun getListMovies(): List<MoviesEntity>? {
         _movies.value = DataDummy.generateDummyMovies()
         return _movies.value
     }

@@ -28,7 +28,6 @@ class MoviesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
-
         onClickListener()
     }
 
@@ -36,7 +35,9 @@ class MoviesFragment : Fragment() {
         binding.rvMovies.adapter = MoviesAdapter(
             MoviesAdapter.OnClickListener {
                 this.findNavController()
-                    .navigate(MoviesFragmentDirections.actionNavigationMoviesToDetailFragment(it))
+                    .navigate(
+                        MoviesFragmentDirections.actionNavigationMoviesToDetailFragment(it)
+                    )
             }
         )
     }
