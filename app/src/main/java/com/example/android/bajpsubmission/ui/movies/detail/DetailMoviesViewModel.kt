@@ -3,14 +3,14 @@ package com.example.android.bajpsubmission.ui.movies.detail
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.android.bajpsubmission.data.MoviesEntity
+import com.example.android.bajpsubmission.data.domain.MoviesModel
 
 class DetailMoviesViewModel : ViewModel() {
 
-    private val _detailMovies = MutableLiveData<MoviesEntity>()
-    val detailMovies: LiveData<MoviesEntity> = _detailMovies
+    private val _detailMovies = MutableLiveData<MoviesModel>()
+    val detailMovies: LiveData<MoviesModel> = _detailMovies
 
-    fun getDetailMovie(movies: MoviesEntity?) {
+    fun getDetailMovie(movies: MoviesModel?) {
         if (_detailMovies.value == null) {
             _detailMovies.value = movies
         }

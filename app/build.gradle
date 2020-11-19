@@ -1,13 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
+    id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id "androidx.navigation.safeargs.kotlin"
-}
-
-androidExtensions {
-    experimental true
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -22,6 +18,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
+        buildConfigField("String", "IMG_URL", "\"https://image.tmdb.org/t/p/w500\"")
+        buildConfigField("String", "API_KEY", "\"378aa10ea738ce4cb6ab3dd53569c97d\"")
     }
 
     buildTypes {
@@ -70,7 +71,13 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
     implementation "androidx.legacy:legacy-support-v4:$legacySupportVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$archLifecylceVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$archLifecylceVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecylceVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    implementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
 
     // Testing dependencies
     androidTestImplementation "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion"

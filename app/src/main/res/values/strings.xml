@@ -4,10 +4,8 @@
     <string name="title_tv_show">TV Show</string>
     <string name="about_this_movie">About this movie</string>
     <string name="movies_poster">movies poster</string>
-    <string name="cast">Cast:</string>
     <string name="backdrops_movies">movies backdrops</string>
-    <string name="director">Director</string>
     <string name="overview">Overview</string>
     <string name="about_this_tv_show">About this TV Show</string>
-    <string name="creator">Creator</string>
+    <string name="loading">Loading…</string>
 </resources>

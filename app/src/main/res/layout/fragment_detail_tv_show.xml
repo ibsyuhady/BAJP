@@ -105,61 +105,26 @@
                     tools:targetApi="p"
                     tools:text="The Walking Dead" />
 
+                <RatingBar
+                    android:id="@+id/rb_detail_tv_show"
+                    style="@android:style/Widget.Material.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="?attr/colorSecondary"
+                    app:layout_constraintStart_toStartOf="@id/tv_detail_tv_show_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_tv_show_title"
+                    app:ratingBar="@{viewModel.detailTvShow.rating}" />
+
                 <TextView
                     android:id="@+id/tv_detail_tv_show_release"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{viewModel.detailTvShow.currentSeason}"
+                    android:layout_marginVertical="@dimen/margin_small"
                     android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_tv_show_title"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_tv_show_title"
-                    tools:text="Season 10 | 2019" />
-
-                <TextView
-                    android:id="@+id/tv_detail_tv_show_creator_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:text="@string/creator"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/img_detail_tv_show_poster"
-                    app:layout_constraintTop_toBottomOf="@+id/img_detail_tv_show_poster" />
-
-                <TextView
-                    android:id="@+id/tv_detail_tv_show_creator"
-                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/margin_normal"
-                    android:text="@{viewModel.detailTvShow.creator}"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_tv_show_creator_text"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_tv_show_creator_text"
-                    tools:text="Frank Darabont" />
-
-                <TextView
-                    android:id="@+id/tv_detail_tv_show_cast_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:text="@string/cast"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_tv_show_creator"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_tv_show_creator" />
-
-                <TextView
-                    android:id="@+id/tv_detail_tv_show_cast"
-                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/margin_normal"
-                    android:text="@{viewModel.detailTvShow.cast}"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_tv_show_cast_text"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_tv_show_cast_text"
-                    tools:text="Andrew Lincoln, Norman Reedus, Danai Gurira" />
+                    app:layout_constraintStart_toStartOf="@+id/rb_detail_tv_show"
+                    app:layout_constraintTop_toBottomOf="@+id/rb_detail_tv_show"
+                    app:released="@{viewModel.detailTvShow.year}"
+                    tools:text="1995" />
 
                 <TextView
                     android:id="@+id/tv_detail_tv_show_overview_text"
@@ -169,8 +134,8 @@
                     android:text="@string/overview"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_tv_show_creator"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_tv_show_cast" />
+                    app:layout_constraintStart_toStartOf="@id/img_detail_tv_show_poster"
+                    app:layout_constraintTop_toBottomOf="@id/img_detail_tv_show_poster" />
 
                 <TextView
                     android:id="@+id/tv_detail_tv_show_overview"
@@ -179,10 +144,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
                     android:layout_marginEnd="@dimen/margin_normal"
-                    android:text="@{viewModel.detailTvShow.description}"
+                    android:text="@{viewModel.detailTvShow.overview}"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_tv_show_cast"
+                    app:layout_constraintStart_toStartOf="@id/img_detail_tv_show_poster"
                     app:layout_constraintTop_toBottomOf="@+id/tv_detail_tv_show_overview_text"
                     tools:text="Sheriff's deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way." />
 

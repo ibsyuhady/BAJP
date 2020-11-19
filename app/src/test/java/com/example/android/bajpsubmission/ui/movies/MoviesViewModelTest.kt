@@ -1,7 +1,7 @@
 package com.example.android.bajpsubmission.ui.movies
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.android.bajpsubmission.data.MoviesEntity
+import com.example.android.bajpsubmission.data.domain.MoviesModel
 import org.hamcrest.Matchers.`is`
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertThat
@@ -30,7 +30,7 @@ class MoviesViewModelTest {
 
     @Test
     fun getEmptyListMovies() {
-        val emptyListMovies = emptyList<MoviesEntity>()
+        val emptyListMovies = emptyList<MoviesModel>()
         assertThat(0, `is`(emptyListMovies.size))
     }
 }

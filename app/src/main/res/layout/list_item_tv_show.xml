@@ -7,7 +7,7 @@
 
         <variable
             name="listTvShow"
-            type="com.example.android.bajpsubmission.data.TvShowEntity" />
+            type="com.example.android.bajpsubmission.data.domain.TvShowModel" />
 
     </data>
 
@@ -47,33 +47,11 @@
             android:id="@+id/tv_tv_show_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{listTvShow.currentSeason}"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tv_tv_show_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_tv_show_title"
+            app:released="@{listTvShow.year}"
             tools:text="2017" />
-
-        <TextView
-            android:id="@+id/tv_tv_show_cast_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            android:text="@string/cast"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/tv_tv_show_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tv_show_year" />
-
-        <TextView
-            android:id="@+id/tv_tv_show_cast"
-            style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@{listTvShow.cast}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_tv_show_cast_text"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tv_show_cast_text"
-            tools:text="Gary Oldman, Kristin Scott Thomas, Lily James" />
 
         <View
             android:id="@+id/divider"

@@ -51,7 +51,7 @@ class MainActivityTest {
         onView(withId(R.id.tv_detail_movies_cast)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_detail_movies_cast)).check(matches(withText(dummyMovies[9].cast)))
         onView(withId(R.id.tv_detail_movies_overview)).check(matches(isDisplayed()))
-        onView(withId(R.id.tv_detail_movies_overview)).check(matches(withText(dummyMovies[9].description)))
+        onView(withId(R.id.tv_detail_movies_overview)).check(matches(withText(dummyMovies[9].overview)))
         pressBack()
     }
 

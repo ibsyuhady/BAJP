@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_detail_movies">
         <argument
             android:name="detailMovies"
-            app:argType="com.example.android.bajpsubmission.data.MoviesEntity" />
+            app:argType="com.example.android.bajpsubmission.data.domain.MoviesModel" />
     </fragment>
 
     <fragment
@@ -43,7 +43,7 @@
         tools:layout="@layout/fragment_detail_tv_show">
         <argument
             android:name="detailTvShow"
-            app:argType="com.example.android.bajpsubmission.data.TvShowEntity" />
+            app:argType="com.example.android.bajpsubmission.data.domain.TvShowModel" />
     </fragment>
 
 </navigation>

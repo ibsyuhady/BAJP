@@ -105,61 +105,26 @@
                     tools:targetApi="p"
                     tools:text="The Shawshank Redemption" />
 
+                <RatingBar
+                    android:id="@+id/rb_detail_movies"
+                    style="@android:style/Widget.Material.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="?attr/colorSecondary"
+                    app:layout_constraintStart_toStartOf="@id/tv_detail_movies_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_movies_title"
+                    app:ratingBar="@{viewModel.detailMovies.rating}" />
+
                 <TextView
                     android:id="@+id/tv_detail_movies_release"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{viewModel.detailMovies.year}"
+                    android:layout_marginVertical="@dimen/margin_small"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_title"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_title"
+                    app:layout_constraintTop_toBottomOf="@id/rb_detail_movies"
+                    app:released="@{viewModel.detailMovies.year}"
                     tools:text="2017" />
-
-                <TextView
-                    android:id="@+id/tv_detail_movies_director_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:text="@string/director"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/img_detail_movies_poster"
-                    app:layout_constraintTop_toBottomOf="@+id/img_detail_movies_poster" />
-
-                <TextView
-                    android:id="@+id/tv_detail_movies_director"
-                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/margin_normal"
-                    android:text="@{viewModel.detailMovies.director}"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_director_text"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_director_text"
-                    tools:text="Frank Darabont" />
-
-                <TextView
-                    android:id="@+id/tv_detail_movies_cast_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:text="@string/cast"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_director"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_director" />
-
-                <TextView
-                    android:id="@+id/tv_detail_movies_cast"
-                    style="@style/TextAppearance.JetpackPlay.TextAppearance.Detail"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/margin_normal"
-                    android:text="@{viewModel.detailMovies.cast}"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_cast_text"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_cast_text"
-                    tools:text="Gary Oldman, Kristin Scott Thomas, Lily James" />
 
                 <TextView
                     android:id="@+id/tv_detail_movies_overview_text"
@@ -169,8 +134,8 @@
                     android:text="@string/overview"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_director"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_cast" />
+                    app:layout_constraintStart_toStartOf="@+id/img_detail_movies_poster"
+                    app:layout_constraintTop_toBottomOf="@+id/img_detail_movies_poster" />
 
                 <TextView
                     android:id="@+id/tv_detail_movies_overview"
@@ -179,10 +144,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
                     android:layout_marginEnd="@dimen/margin_normal"
-                    android:text="@{viewModel.detailMovies.description}"
+                    android:text="@{viewModel.detailMovies.overview}"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_movies_cast"
+                    app:layout_constraintStart_toStartOf="@+id/img_detail_movies_poster"
                     app:layout_constraintTop_toBottomOf="@+id/tv_detail_movies_overview_text"
                     tools:text="Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope." />
 

@@ -30,10 +30,9 @@ class DetailMoviesViewModelTest {
         assertThat(dummyMovies.moviesId, `is`(detailMovies?.moviesId))
         assertThat(dummyMovies.title, `is`(detailMovies?.title))
         assertThat(dummyMovies.year, `is`(detailMovies?.year))
-        assertThat(dummyMovies.description, `is`(detailMovies?.description))
+        assertThat(dummyMovies.overview, `is`(detailMovies?.overview))
         assertThat(dummyMovies.poster, `is`(detailMovies?.poster))
         assertThat(dummyMovies.backdrop, `is`(detailMovies?.backdrop))
-        assertThat(dummyMovies.director, `is`(detailMovies?.director))
-        assertThat(dummyMovies.cast, `is`(detailMovies?.cast))
+        assertThat(dummyMovies.rating, `is`(detailMovies?.rating))
     }
 }

@@ -3,20 +3,21 @@ package com.example.android.bajpsubmission.ui.tvshow
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.android.bajpsubmission.data.TvShowEntity
-import com.example.android.bajpsubmission.utils.DataDummy
+import com.example.android.bajpsubmission.data.domain.TvShowModel
+import com.example.android.bajpsubmission.data.source.AppRepository
 
-class TvShowViewModel : ViewModel() {
+class TvShowViewModel(private val appRepository: AppRepository) : ViewModel() {
 
-    private val _tvShow = MutableLiveData<List<TvShowEntity>>()
-    val tvShow: LiveData<List<TvShowEntity>> = _tvShow
+    private var _tvShow: LiveData<List<TvShowModel>> = MutableLiveData()
+    val tvShow: LiveData<List<TvShowModel>>
+        get() = _tvShow
 
     init {
         getListTvShow()
     }
 
-    fun getListTvShow(): List<TvShowEntity>? {
-        _tvShow.value = DataDummy.generateDummyTvShow()
-        return _tvShow.value
+    fun getListTvShow(): LiveData<List<TvShowModel>> {
+        _tvShow = appRepository.fetchTvShow()
+        return tvShow
     }
 }

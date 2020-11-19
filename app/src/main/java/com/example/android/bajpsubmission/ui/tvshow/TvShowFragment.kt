@@ -8,18 +8,23 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.android.bajpsubmission.databinding.FragmentTvShowBinding
+import com.example.android.bajpsubmission.utils.ViewModelFactory
 import com.example.android.bajpsubmission.utils.adapters.TvShowAdapter
+import com.example.android.bajpsubmission.utils.hide
+import com.example.android.bajpsubmission.utils.show
 
 class TvShowFragment : Fragment() {
 
     private lateinit var binding: FragmentTvShowBinding
-    private val viewModel by viewModels<TvShowViewModel>()
+    private val viewModel by viewModels<TvShowViewModel> {
+        ViewModelFactory.getInstance()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentTvShowBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -28,7 +33,20 @@ class TvShowFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+        loadTvShow()
         onClickListener()
+    }
+
+    private fun loadTvShow() {
+        binding.pbTvShow.show()
+        binding.tvLoading.show()
+        viewModel.tvShow.observe(
+            viewLifecycleOwner,
+            {
+                binding.pbTvShow.hide()
+                binding.tvLoading.hide()
+            }
+        )
     }
 
     private fun onClickListener() {

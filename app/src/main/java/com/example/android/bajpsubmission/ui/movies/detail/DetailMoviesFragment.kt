@@ -18,7 +18,7 @@ class DetailMoviesFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDetailMoviesBinding.inflate(inflater, container, false)
         return binding.root
     }

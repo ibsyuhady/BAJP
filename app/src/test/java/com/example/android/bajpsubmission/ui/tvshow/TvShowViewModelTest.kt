@@ -1,7 +1,7 @@
 package com.example.android.bajpsubmission.ui.tvshow
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.android.bajpsubmission.data.TvShowEntity
+import com.example.android.bajpsubmission.data.domain.TvShowModel
 import junit.framework.TestCase.assertNotNull
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
@@ -30,7 +30,7 @@ class TvShowViewModelTest {
 
     @Test
     fun getEmptyListTvShow() {
-        val emptyListTvShow = emptyList<TvShowEntity>()
+        val emptyListTvShow = emptyList<TvShowModel>()
         assertThat(0, `is`(emptyListTvShow.size))
     }
 }
