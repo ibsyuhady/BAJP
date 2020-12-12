@@ -10,7 +10,6 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface ApiService {
     companion object {
@@ -24,8 +23,8 @@ interface ApiService {
     }
 
     @GET("movie/now_playing?api_key=$API_KEY")
-    fun getMovies(@Query("page") page: Int = 1): Call<MovieResponseContainer<MoviesResponse>>
+    fun getMovies(): Call<MovieResponseContainer<MoviesResponse>>
 
     @GET("tv/on_the_air?api_key=$API_KEY")
-    fun getTvShow(@Query("page") page: Int = 1): Call<TvShowResponseContainer<TvShowResponse>>
+    fun getTvShow(): Call<TvShowResponseContainer<TvShowResponse>>
 }

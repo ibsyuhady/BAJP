@@ -12,12 +12,10 @@ class MoviesViewModel(private val appRepository: AppRepository) : ViewModel() {
     val movies: LiveData<List<MoviesModel>>
         get() = _movies
 
-    init {
-        getListMovies()
-    }
-
     fun getListMovies(): LiveData<List<MoviesModel>> {
-        _movies = appRepository.fetchMovies()
+        if (_movies.value == null) {
+            _movies = appRepository.fetchMovies()
+        }
         return _movies
     }
 }

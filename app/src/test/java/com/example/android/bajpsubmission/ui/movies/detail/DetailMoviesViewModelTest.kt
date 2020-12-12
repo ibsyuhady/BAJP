@@ -2,9 +2,9 @@ package com.example.android.bajpsubmission.ui.movies.detail
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.android.bajpsubmission.utils.DataDummy
-import junit.framework.TestCase.assertNotNull
 import org.hamcrest.MatcherAssert.assertThat
-import org.hamcrest.core.Is.`is`
+import org.hamcrest.Matchers.`is`
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

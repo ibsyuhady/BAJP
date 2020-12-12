@@ -12,12 +12,10 @@ class TvShowViewModel(private val appRepository: AppRepository) : ViewModel() {
     val tvShow: LiveData<List<TvShowModel>>
         get() = _tvShow
 
-    init {
-        getListTvShow()
-    }
-
     fun getListTvShow(): LiveData<List<TvShowModel>> {
-        _tvShow = appRepository.fetchTvShow()
+        if (_tvShow.value == null) {
+            _tvShow = appRepository.fetchTvShow()
+        }
         return tvShow
     }
 }

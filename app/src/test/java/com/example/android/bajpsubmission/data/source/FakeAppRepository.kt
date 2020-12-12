@@ -11,19 +11,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
-class AppRepository private constructor(
+class FakeAppRepository(
     private val remoteDataSource: RemoteDataSource
 ) : DataSource {
-
-    companion object {
-        @Volatile
-        private var instance: AppRepository? = null
-
-        fun getInstance(remoteDataSource: RemoteDataSource): AppRepository =
-            instance ?: synchronized(this) {
-                instance ?: AppRepository(remoteDataSource)
-            }
-    }
 
     override fun fetchMovies(): LiveData<List<MoviesModel>> {
         val listMovies = MutableLiveData<List<MoviesModel>>()
