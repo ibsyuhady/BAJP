@@ -39,12 +39,12 @@ class MoviesFragment : Fragment() {
 
     private fun loadMovies() {
         binding.pbMovies.show()
-        binding.tvLoading.show()
+        binding.tvLoadingMovies.show()
         viewModel.getListMovies().observe(
             viewLifecycleOwner,
             {
                 binding.pbMovies.hide()
-                binding.tvLoading.hide()
+                binding.tvLoadingMovies.hide()
             }
         )
     }

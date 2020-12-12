@@ -39,12 +39,12 @@ class TvShowFragment : Fragment() {
 
     private fun loadTvShow() {
         binding.pbTvShow.show()
-        binding.tvLoading.show()
+        binding.tvLoadingTvShow.show()
         viewModel.getListTvShow().observe(
             viewLifecycleOwner,
             {
                 binding.pbTvShow.hide()
-                binding.tvLoading.hide()
+                binding.tvLoadingTvShow.hide()
             }
         )
     }
