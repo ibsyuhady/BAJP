@@ -24,7 +24,9 @@ class RemoteDataSource {
             callback.onAllMoviesReceived(
                 listMovies
             )
-            EspressoIdlingResource.decrement()
+            if (!EspressoIdlingResource.getEspressoIdlingResource().isIdleNow) {
+                EspressoIdlingResource.decrement()
+            }
         }
     }
 
@@ -36,7 +38,9 @@ class RemoteDataSource {
             callback.onAllTvShowReceived(
                 listTvShow
             )
-            EspressoIdlingResource.decrement()
+            if (!EspressoIdlingResource.getEspressoIdlingResource().isIdleNow) {
+                EspressoIdlingResource.decrement()
+            }
         }
     }
 

@@ -3,22 +3,27 @@ package com.example.android.bajpsubmission.ui.tvshow
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.android.bajpsubmission.data.domain.TvShowModel
 import com.example.android.bajpsubmission.data.source.AppRepository
 import com.example.android.bajpsubmission.utils.DataDummy
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
+import org.junit.After
 import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
+import org.mockito.Mockito
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.verify
-import org.mockito.junit.MockitoJUnitRunner
+import org.mockito.MockitoAnnotations
+import org.robolectric.annotation.Config
 
-@RunWith(MockitoJUnitRunner::class)
+@RunWith(AndroidJUnit4::class)
+@Config(manifest = Config.NONE)
 class TvShowViewModelTest {
 
     private val dummyTvShow = DataDummy.generateDummyTvShow()
@@ -36,6 +41,16 @@ class TvShowViewModelTest {
     @Before
     fun setUp() {
         viewModel = TvShowViewModel(appRepository)
+    }
+
+    @Before
+    fun setUpMockito() {
+        MockitoAnnotations.openMocks(this)
+    }
+
+    @After
+    fun tearDownMockito() {
+        Mockito.validateMockitoUsage()
     }
 
     @Test
