@@ -67,10 +67,4 @@ class MoviesViewModelTest {
         viewModel.getListMovies().observeForever(observer)
         verify(observer).onChanged(dummyMovies)
     }
-
-    @Test
-    fun getEmptyListMovies() {
-        val emptyListMovies = emptyList<MoviesModel>()
-        assertThat(0, `is`(emptyListMovies.size))
-    }
 }

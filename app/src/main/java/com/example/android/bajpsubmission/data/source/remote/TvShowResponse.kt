@@ -15,6 +15,9 @@ data class TvShowResponse(
     @field:SerializedName("name")
     val title: String? = null,
 
+    @field:SerializedName("original_name")
+    val originalTitle: String? = null,
+
     @field:SerializedName("first_air_date")
     val year: String? = null,
 
@@ -28,5 +31,5 @@ data class TvShowResponse(
     val backdrop: String? = null,
 
     @field:SerializedName("vote_average")
-    val rating: Double? = null
+    val rating: Double? = null,
 )

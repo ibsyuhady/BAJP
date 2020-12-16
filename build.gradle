@@ -16,7 +16,7 @@ buildscript {
         archLifecycleVersion = '2.2.0'
         archTestingVersion = '2.1.0'
         constraintLayoutVersion = '2.0.4'
-        coroutinesVersion = '1.4.0'
+        coroutinesVersion = '1.4.2'
         espressoVersion = '3.3.0'
         glideVersion = '4.11.0'
         gradleVersion = '4.1.1'

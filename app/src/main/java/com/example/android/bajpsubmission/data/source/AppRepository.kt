@@ -60,6 +60,7 @@ class AppRepository private constructor(
                         val tvShow = TvShowModel(
                             response.tvShowId,
                             response.title,
+                            response.originalTitle,
                             response.year,
                             response.overview,
                             response.poster,

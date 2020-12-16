@@ -105,14 +105,25 @@
                     tools:targetApi="p"
                     tools:text="The Walking Dead" />
 
+                <TextView
+                    android:id="@+id/tv_detail_tv_show_original_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.detailTvShow.originalTitle}"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_tv_show_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_tv_show_title"
+                    tools:text="The Walking Dead" />
+
                 <RatingBar
                     android:id="@+id/rb_detail_tv_show"
                     style="@android:style/Widget.Material.Light.RatingBar.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
                     android:progressTint="?attr/colorSecondary"
                     app:layout_constraintStart_toStartOf="@id/tv_detail_tv_show_title"
-                    app:layout_constraintTop_toBottomOf="@id/tv_detail_tv_show_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_tv_show_original_title"
                     app:ratingBar="@{viewModel.detailTvShow.rating}" />
 
                 <TextView

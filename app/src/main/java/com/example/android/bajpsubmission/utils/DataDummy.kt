@@ -143,6 +143,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 1,
                 title = "The Walking Dead",
+                originalTitle = "The Walking Dead",
                 year = "Season 10 | 2019",
                 overview = "Sheriff's deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.",
                 poster = "https://image.tmdb.org/t/p/original/wmv0oIun52Xeq65sBKfHiUkiBKc.jpg",
@@ -155,6 +156,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 2,
                 title = "Attack on Titan",
+                originalTitle = "進撃の巨人",
                 year = "Season 4 | 2020",
                 overview = "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
                 poster = "https://image.tmdb.org/t/p/original/lK0NAXT7mcJrC3NK8vpXwK5EJQu.jpg",
@@ -167,6 +169,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 3,
                 title = "Sherlock",
+                originalTitle = "Sherlock",
                 year = "Season 4 | 2017 | Ended",
                 overview = "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
                 poster = "https://image.tmdb.org/t/p/original/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg",
@@ -179,6 +182,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 4,
                 title = "Death Note",
+                originalTitle = "Death Note",
                 year = "Season 1 | 2006 | Ended",
                 overview = "Light Yagami is an ace student with great prospects—and he’s bored out of his mind. But all that changes when he finds the Death Note, a notebook dropped by a rogue Shinigami death god. Any human whose name is written in the notebook dies, and Light has vowed to use the power of the Death Note to rid the world of evil. But will Light succeed in his noble goal, or will the Death Note turn him into the very thing he fights against?",
                 poster = "https://image.tmdb.org/t/p/original/nrTHZUlI8f2iBNMbycqOd2cQQVO.jpg",
@@ -191,6 +195,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 5,
                 title = "Mr. Robot",
+                originalTitle = "Mr. Robot",
                 year = "Season 4 | 2019",
                 overview = "A contemporary and culturally resonant drama about a young programmer, Elliot, who suffers from a debilitating anti-social disorder and decides that he can only connect to people by hacking them. He wields his skills as a weapon to protect the people that he cares about. Elliot will find himself in the intersection between a cybersecurity firm he works for and the underworld organizations that are recruiting him to bring down corporate America.",
                 poster = "https://image.tmdb.org/t/p/original/oKIBhzZzDX07SoE2bOLhq2EE8rf.jpg",
@@ -203,6 +208,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 6,
                 title = "One Piece",
+                originalTitle = "ワンピース",
                 year = "Wano Country Arc | 2020",
                 overview = "Years ago, the fearsome pirate king Gol D. Roger was executed, leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new pirate king. Monkey D. Luffy, a boy who consumed one of the \"Devil's Fruits\", has it in his head that he'll follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and he's surrounded by a bevy of skilled fighters and thieves to help him along the way. Monkey D. Luffy brings a bunch of his crew followed by, Roronoa Zoro, Nami, Usopp, Sanji, Tony-Tony Chopper, Nico Robin, Franky, and Brook. They will do anything to get the One Piece and become King of the Pirates!..",
                 poster = "https://image.tmdb.org/t/p/original/uStT6g4khexdKPyaiosp0fj3zEz.jpg",
@@ -215,6 +221,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 7,
                 title = "Heroes",
+                originalTitle = "Heroes",
                 year = "Redemption | 2009 | Ended",
                 overview = "Common people discover that they have super powers. Their lives intertwine as a devastating event must be prevented.",
                 poster = "https://image.tmdb.org/t/p/original/tV1BK0nfX5X2uveaaYbHot0JfJj.jpg",
@@ -227,6 +234,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 8,
                 title = "Prison Break",
+                originalTitle = "Prison Break",
                 year = "Season 5 | 2017 | Ended",
                 overview = "Due to a political conspiracy, an innocent man is sent to death row and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break the both of them out, from the inside out.",
                 poster = "https://image.tmdb.org/t/p/original/j7HFOunuAVpOdiBhXpjwRxIgK5y.jpg",
@@ -239,6 +247,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 9,
                 title = "The Boys",
+                originalTitle = "The Boys",
                 year = "Season 2 | 2020",
                 overview = "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.",
                 poster = "https://image.tmdb.org/t/p/original/e7oHnWqqdC9JRxKCJFfpUaKX66U.jpg",
@@ -251,6 +260,7 @@ object DataDummy {
             TvShowModel(
                 tvShowId = 10,
                 title = "Fargo",
+                originalTitle = "Fargo",
                 year = "Season 4 | 2020",
                 overview = "A close-knit anthology series dealing with stories involving malice, violence and murder based in and around Minnesota.",
                 poster = "https://image.tmdb.org/t/p/original/9ZIhl17uFlXCNUputSEDHwZYIEJ.jpg",
@@ -395,6 +405,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 1,
                 title = "The Walking Dead",
+                originalTitle = "The Walking Dead",
                 year = "Season 10 | 2019",
                 overview = "Sheriff's deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.",
                 poster = "https://image.tmdb.org/t/p/original/wmv0oIun52Xeq65sBKfHiUkiBKc.jpg",
@@ -407,6 +418,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 2,
                 title = "Attack on Titan",
+                originalTitle = "進撃の巨人",
                 year = "Season 4 | 2020",
                 overview = "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
                 poster = "https://image.tmdb.org/t/p/original/lK0NAXT7mcJrC3NK8vpXwK5EJQu.jpg",
@@ -419,6 +431,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 3,
                 title = "Sherlock",
+                originalTitle = "Sherlock",
                 year = "Season 4 | 2017 | Ended",
                 overview = "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
                 poster = "https://image.tmdb.org/t/p/original/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg",
@@ -431,6 +444,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 4,
                 title = "Death Note",
+                originalTitle = "Death Note",
                 year = "Season 1 | 2006 | Ended",
                 overview = "Light Yagami is an ace student with great prospects—and he’s bored out of his mind. But all that changes when he finds the Death Note, a notebook dropped by a rogue Shinigami death god. Any human whose name is written in the notebook dies, and Light has vowed to use the power of the Death Note to rid the world of evil. But will Light succeed in his noble goal, or will the Death Note turn him into the very thing he fights against?",
                 poster = "https://image.tmdb.org/t/p/original/nrTHZUlI8f2iBNMbycqOd2cQQVO.jpg",
@@ -443,6 +457,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 5,
                 title = "Mr. Robot",
+                originalTitle = "Mr. Robot",
                 year = "Season 4 | 2019",
                 overview = "A contemporary and culturally resonant drama about a young programmer, Elliot, who suffers from a debilitating anti-social disorder and decides that he can only connect to people by hacking them. He wields his skills as a weapon to protect the people that he cares about. Elliot will find himself in the intersection between a cybersecurity firm he works for and the underworld organizations that are recruiting him to bring down corporate America.",
                 poster = "https://image.tmdb.org/t/p/original/oKIBhzZzDX07SoE2bOLhq2EE8rf.jpg",
@@ -455,6 +470,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 6,
                 title = "One Piece",
+                originalTitle = "ワンピース",
                 year = "Wano Country Arc | 2020",
                 overview = "Years ago, the fearsome pirate king Gol D. Roger was executed, leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new pirate king. Monkey D. Luffy, a boy who consumed one of the \"Devil's Fruits\", has it in his head that he'll follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and he's surrounded by a bevy of skilled fighters and thieves to help him along the way. Monkey D. Luffy brings a bunch of his crew followed by, Roronoa Zoro, Nami, Usopp, Sanji, Tony-Tony Chopper, Nico Robin, Franky, and Brook. They will do anything to get the One Piece and become King of the Pirates!..",
                 poster = "https://image.tmdb.org/t/p/original/uStT6g4khexdKPyaiosp0fj3zEz.jpg",
@@ -467,6 +483,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 7,
                 title = "Heroes",
+                originalTitle = "Heroes",
                 year = "Redemption | 2009 | Ended",
                 overview = "Common people discover that they have super powers. Their lives intertwine as a devastating event must be prevented.",
                 poster = "https://image.tmdb.org/t/p/original/tV1BK0nfX5X2uveaaYbHot0JfJj.jpg",
@@ -479,6 +496,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 8,
                 title = "Prison Break",
+                originalTitle = "Prison Break",
                 year = "Season 5 | 2017 | Ended",
                 overview = "Due to a political conspiracy, an innocent man is sent to death row and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break the both of them out, from the inside out.",
                 poster = "https://image.tmdb.org/t/p/original/j7HFOunuAVpOdiBhXpjwRxIgK5y.jpg",
@@ -491,6 +509,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 9,
                 title = "The Boys",
+                originalTitle = "The Boys",
                 year = "Season 2 | 2020",
                 overview = "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.",
                 poster = "https://image.tmdb.org/t/p/original/e7oHnWqqdC9JRxKCJFfpUaKX66U.jpg",
@@ -503,6 +522,7 @@ object DataDummy {
             TvShowResponse(
                 tvShowId = 10,
                 title = "Fargo",
+                originalTitle = "Fargo",
                 year = "Season 4 | 2020",
                 overview = "A close-knit anthology series dealing with stories involving malice, violence and murder based in and around Minnesota.",
                 poster = "https://image.tmdb.org/t/p/original/9ZIhl17uFlXCNUputSEDHwZYIEJ.jpg",

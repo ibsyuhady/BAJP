@@ -67,10 +67,4 @@ class TvShowViewModelTest {
         viewModel.getListTvShow().observeForever(observer)
         verify(observer).onChanged(dummyTvShow)
     }
-
-    @Test
-    fun getEmptyListTvShow() {
-        val emptyListTvShow = emptyList<TvShowModel>()
-        assertThat(0, `is`(emptyListTvShow.size))
-    }
 }

@@ -19,28 +19,36 @@ class RemoteDataSource {
     suspend fun fetchMovies(
         callback: FetchMoviesCallback
     ) {
-        EspressoIdlingResource.increment()
-        ApiService.create().getMovies().await().moviesResult?.let { listMovies ->
-            callback.onAllMoviesReceived(
-                listMovies
-            )
-            if (!EspressoIdlingResource.getEspressoIdlingResource().isIdleNow) {
-                EspressoIdlingResource.decrement()
+        try {
+            EspressoIdlingResource.increment()
+            ApiService.create().getMovies().await().moviesResult?.let { listMovies ->
+                callback.onAllMoviesReceived(
+                    listMovies
+                )
+                if (!EspressoIdlingResource.getEspressoIdlingResource().isIdleNow) {
+                    EspressoIdlingResource.decrement()
+                }
             }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 
     suspend fun fetchTvShow(
         callback: FetchTvShowCallback
     ) {
-        EspressoIdlingResource.increment()
-        ApiService.create().getTvShow().await().tvShowResult?.let { listTvShow ->
-            callback.onAllTvShowReceived(
-                listTvShow
-            )
-            if (!EspressoIdlingResource.getEspressoIdlingResource().isIdleNow) {
-                EspressoIdlingResource.decrement()
+        try {
+            EspressoIdlingResource.increment()
+            ApiService.create().getTvShow().await().tvShowResult?.let { listTvShow ->
+                callback.onAllTvShowReceived(
+                    listTvShow
+                )
+                if (!EspressoIdlingResource.getEspressoIdlingResource().isIdleNow) {
+                    EspressoIdlingResource.decrement()
+                }
             }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 

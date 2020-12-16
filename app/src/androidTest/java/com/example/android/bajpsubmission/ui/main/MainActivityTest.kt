@@ -78,6 +78,7 @@ class MainActivityTest {
         onView(withId(R.id.img_detail_tv_show_backdrop)).check(matches(isDisplayed()))
         onView(withId(R.id.img_detail_tv_show_poster)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_detail_tv_show_title)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_detail_tv_show_original_title)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_detail_tv_show_release)).check(matches(isDisplayed()))
         onView(withId(R.id.rb_detail_tv_show)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_detail_tv_show_overview)).check(matches(isDisplayed()))

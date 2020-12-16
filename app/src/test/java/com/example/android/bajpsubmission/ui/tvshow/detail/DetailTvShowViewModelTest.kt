@@ -54,6 +54,7 @@ class DetailTvShowViewModelTest {
         assertNotNull(detailTvShow)
         assertThat(dummyTvShow.tvShowId, `is`(detailTvShow?.tvShowId))
         assertThat(dummyTvShow.title, `is`(detailTvShow?.title))
+        assertThat(dummyTvShow.originalTitle, `is`(detailTvShow?.originalTitle))
         assertThat(dummyTvShow.year, `is`(detailTvShow?.year))
         assertThat(dummyTvShow.overview, `is`(detailTvShow?.overview))
         assertThat(dummyTvShow.poster, `is`(detailTvShow?.poster))
