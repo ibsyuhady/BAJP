@@ -1,13 +1,13 @@
 package com.example.android.bajpsubmission.ui.main
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.android.bajpsubmission.R
 import com.example.android.bajpsubmission.databinding.ActivityMainBinding
+import dagger.android.support.DaggerAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding
 

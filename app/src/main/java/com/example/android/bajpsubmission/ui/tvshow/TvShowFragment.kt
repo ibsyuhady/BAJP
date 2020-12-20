@@ -4,20 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.android.bajpsubmission.databinding.FragmentTvShowBinding
-import com.example.android.bajpsubmission.utils.ViewModelFactory
 import com.example.android.bajpsubmission.utils.adapters.TvShowAdapter
 import com.example.android.bajpsubmission.utils.hide
 import com.example.android.bajpsubmission.utils.show
+import dagger.android.support.DaggerFragment
+import javax.inject.Inject
 
-class TvShowFragment : Fragment() {
+class TvShowFragment : DaggerFragment() {
 
+    @Inject
+    lateinit var factory: ViewModelProvider.Factory
     private lateinit var binding: FragmentTvShowBinding
     private val viewModel by viewModels<TvShowViewModel> {
-        ViewModelFactory.getInstance()
+        factory
     }
 
     override fun onCreateView(

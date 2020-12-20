@@ -1,4 +1,4 @@
-package com.example.android.bajpsubmission.data.source.remote
+package com.example.android.bajpsubmission.data.source.remote.response
 
 import com.google.gson.annotations.SerializedName
 

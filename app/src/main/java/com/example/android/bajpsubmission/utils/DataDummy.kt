@@ -4,8 +4,8 @@ package com.example.android.bajpsubmission.utils
 
 import com.example.android.bajpsubmission.data.domain.MoviesModel
 import com.example.android.bajpsubmission.data.domain.TvShowModel
-import com.example.android.bajpsubmission.data.source.remote.MoviesResponse
-import com.example.android.bajpsubmission.data.source.remote.TvShowResponse
+import com.example.android.bajpsubmission.data.source.remote.response.MoviesResponse
+import com.example.android.bajpsubmission.data.source.remote.response.TvShowResponse
 
 object DataDummy {
 

@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.android.bajpsubmission.data.domain.MoviesModel
 import com.example.android.bajpsubmission.data.domain.TvShowModel
-import com.example.android.bajpsubmission.data.source.remote.MoviesResponse
 import com.example.android.bajpsubmission.data.source.remote.RemoteDataSource
-import com.example.android.bajpsubmission.data.source.remote.TvShowResponse
+import com.example.android.bajpsubmission.data.source.remote.response.MoviesResponse
+import com.example.android.bajpsubmission.data.source.remote.response.TvShowResponse
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch

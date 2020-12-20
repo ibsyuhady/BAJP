@@ -3,22 +3,13 @@ package com.example.android.bajpsubmission.utils
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.android.bajpsubmission.data.source.AppRepository
-import com.example.android.bajpsubmission.di.Injection
 import com.example.android.bajpsubmission.ui.movies.MoviesViewModel
 import com.example.android.bajpsubmission.ui.tvshow.TvShowViewModel
+import javax.inject.Inject
 
-class ViewModelFactory private constructor(private val appRepository: AppRepository) :
-    ViewModelProvider.NewInstanceFactory() {
-
-    companion object {
-        @Volatile
-        private var instance: ViewModelFactory? = null
-
-        fun getInstance(): ViewModelFactory =
-            instance ?: synchronized(this) {
-                instance ?: ViewModelFactory(Injection.provideRepository())
-            }
-    }
+class ViewModelFactory @Inject constructor(
+    private val appRepository: AppRepository
+) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
